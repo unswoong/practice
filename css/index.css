@@ -1,0 +1,142 @@
+* {
+  text-decoration: none;
+}
+
+#nav {
+  width: 100vw;
+  padding: 0 24px;
+  background-color: #222;
+  position: fixed;
+  z-index: 30;
+}
+
+#menu-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 54px;
+}
+
+.menu-content > a {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(158, 158, 158);
+}
+.menu-content > a:hover {
+  color: white;
+  transition: 0.5s;
+}
+
+.logo-btn {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/logo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: brightness(0) invert(1);
+}
+
+.hide {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* fin--header */
+
+#intro {
+  width: 100vw;
+}
+
+.welcome-section {
+  width: 100vw;
+  min-height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.welcome-title {
+  display: block;
+  font-size: 108px;
+  color: #222;
+  font-weight: bolder;
+}
+
+.video-section {
+  display: flex;
+  min-height: 1000px;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-wrap {
+  margin-top: 48px;
+  width: 700px;
+  height: 700px;
+  border-radius: 100%;
+  overflow: hidden;
+  filter: grayscale(100%);
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-section {
+  display: flex;
+  min-height: 1000px;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-rotate-img-wrap {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  animation: inner-rotate_animation 30s linear infinite;
+  transform-origin: 50% 50%;
+}
+.inner-rotate-img {
+  width: 100%;
+  height: 100%;
+}
+
+.outter-rotate-img-wrap {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  animation: outter-rotate_animation 30s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.outter-rotate-img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes inner-rotate_animation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes outter-rotate_animation {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
