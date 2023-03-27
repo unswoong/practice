@@ -62,17 +62,12 @@
 .welcome-section {
   width: 100vw;
   min-height: 1000px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
-.welcome-title {
-  display: block;
-  font-size: 108px;
-  color: #222;
-  font-weight: bolder;
+.welcome-img-wrap {
+}
+
+.welcome-img {
 }
 
 .video-section {
@@ -86,8 +81,6 @@
   margin-top: 48px;
   width: 700px;
   height: 700px;
-  border-radius: 100%;
-  overflow: hidden;
   filter: grayscale(100%);
 }
 
@@ -108,7 +101,7 @@
   position: relative;
   width: 300px;
   height: 300px;
-  animation: inner-rotate_animation 30s linear infinite;
+  animation: inner-rotate-animation 30s linear infinite;
   transform-origin: 50% 50%;
 }
 .inner-rotate-img {
@@ -120,7 +113,7 @@
   position: absolute;
   width: 500px;
   height: 500px;
-  animation: outter-rotate_animation 30s linear infinite;
+  animation: outter-rotate-animation 30s linear infinite;
   transform-origin: 50% 50%;
 }
 
@@ -129,13 +122,13 @@
   height: 100%;
 }
 
-@keyframes inner-rotate_animation {
+@keyframes inner-rotate-animation {
   100% {
     transform: rotate(360deg);
   }
 }
 
-@keyframes outter-rotate_animation {
+@keyframes outter-rotate-animation {
   100% {
     transform: rotate(-360deg);
   }
